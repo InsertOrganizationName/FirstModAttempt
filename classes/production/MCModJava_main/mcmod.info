@@ -1,14 +1,14 @@
 [
 {
-  "modid": "ProDevMod",
-  "name": "Pro Dev Mod",
-  "description": "Awesome Pro Dev Mod by two Pro Devs",
-  "version": "0.1",
-  "mcversion": "1.12.2",
+  "modid": "examplemod",
+  "name": "Example Mod",
+  "description": "Example placeholder mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["kirypto", "TheLuminary"],
-  "credits": "First Post!",
+  "authorList": ["ExampleDude"],
+  "credits": "The Forge and FML guys, for making this example",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
