@@ -18,7 +18,9 @@ public class StartupCommon {
         ForgeRegistries.ITEMS.register(itemTestBlock);
     }
 
-    public static void initCommon() { }
+    public static void initCommon() {
+
+    }
 
     public static void postInitCommon() { }
 }
