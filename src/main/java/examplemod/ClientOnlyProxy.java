@@ -8,6 +8,13 @@ import net.minecraft.entity.player.EntityPlayerMP;
 public class ClientOnlyProxy extends CommonProxy {
 
     @Override
+    public void preInit() {
+        super.preInit();
+
+        StartupClientOnly.preInitClientOnly();
+    }
+
+    @Override
     public boolean playerIsInCreativeMode(EntityPlayer player) {
         if (player instanceof EntityPlayerMP) {
             EntityPlayerMP entityPlayerMP = (EntityPlayerMP)player;
