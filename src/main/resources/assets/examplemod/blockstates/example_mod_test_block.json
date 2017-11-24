@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "normal": { "model": "examplemod:test_block_model" }
+  }
+}

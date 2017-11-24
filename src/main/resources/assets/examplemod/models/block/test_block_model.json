@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "examplemod:blocks/test_block_face0",
+    "up": "examplemod:blocks/test_block_face1",
+    "north": "examplemod:blocks/test_block_face2",
+    "east": "examplemod:blocks/test_block_face5",
+    "south": "examplemod:blocks/test_block_face3",
+    "west": "examplemod:blocks/test_block_face4",
+    "particle": "blocks/lapis_block"
+  }
+}

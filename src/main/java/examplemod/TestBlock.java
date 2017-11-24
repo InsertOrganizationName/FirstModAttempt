@@ -1,5 +1,6 @@
 package examplemod;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -8,7 +9,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-public class TestBlock extends BlockContainer {
+public class TestBlock extends Block {
 
     public TestBlock() {
         super(Material.ROCK);
@@ -16,9 +17,9 @@ public class TestBlock extends BlockContainer {
         System.out.println("~~~~~~~~~~~~~~~~  Hit me!");
     }
 
-    @Nullable
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TestBlockEntity();
-    }
+//    @Nullable
+//    @Override
+//    public TileEntity createNewTileEntity(World worldIn, int meta) {
+//        return new TestBlockEntity();
+//    }
 }

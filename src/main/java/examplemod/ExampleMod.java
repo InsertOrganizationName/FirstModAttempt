@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod
 {
-    static final String MODID = "first_mod";
+    static final String MODID = "examplemod";
     static final String VERSION = "0.0.1";
 
     @SidedProxy(clientSide = "examplemod.ClientOnlyProxy", serverSide = "examplemod.ClientOnlyProxy")
