@@ -1,13 +1,10 @@
-package com.example.examplemod;
+package examplemod;
 
-import net.minecraft.init.Blocks;
-import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod
@@ -15,7 +12,7 @@ public class ExampleMod
     static final String MODID = "first_mod";
     static final String VERSION = "0.0.1";
 
-    @SidedProxy(clientSide = "com.example.examplemod.ClientOnlyProxy", serverSide = "com.example.examplemod.ClientOnlyProxy")
+    @SidedProxy(clientSide = "examplemod.ClientOnlyProxy", serverSide = "examplemod.ClientOnlyProxy")
     public static CommonProxy proxy;
 
     @EventHandler

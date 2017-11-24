@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package examplemod;
 
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;

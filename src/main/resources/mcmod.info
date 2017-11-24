@@ -1,6 +1,6 @@
 [
 {
-  "modid": "first_mod",
+  "modid": "examplemod",
   "name": "First Mod",
   "description": "First mod attempt.",
   "version": "0.0.1",

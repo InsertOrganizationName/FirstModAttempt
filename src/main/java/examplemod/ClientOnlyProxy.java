@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package examplemod;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
