@@ -1,20 +1,20 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "AAA",
-    " A ",
-    " A "
-  ],
-  "key": {
-    "A": [
-      {
-        "item": "minecraft:stone",
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AAA",
+        " A ",
+        " A "
+    ],
+    "key": {
+        "A": [
+            {
+                "item": "minecraft:stone",
+                "data": 0
+            }
+        ]
+    },
+    "result": {
+        "item": "examplemod:example_mod_test_block",
         "data": 0
-      }
-    ]
-  },
-  "result": {
-    "item": "examplemod:example_mod_test_block",
-    "data": 0
-  }
+    }
 }

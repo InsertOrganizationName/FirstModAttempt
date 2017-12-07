@@ -1,1 +1,3 @@
 tile.example_mod_test_block.name=Test Block
+tile.example_mod_test_furnace.name=Test Furnace
+container.example_mod_test_furnace.name=Test Furnace

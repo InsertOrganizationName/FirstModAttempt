@@ -12,6 +12,9 @@ public class ExampleMod
     static final String MODID = "examplemod";
     static final String VERSION = "0.0.1";
 
+    @Mod.Instance(ExampleMod.MODID)
+    public static ExampleMod instance;
+
     @SidedProxy(clientSide = "examplemod.ClientOnlyProxy", serverSide = "examplemod.ClientOnlyProxy")
     public static CommonProxy proxy;
 
