@@ -150,12 +150,24 @@ public class TestFurnaceTileEntity extends TileEntity implements IInventory, ITi
             return null;
         }
 
+        for (int fuelSlot = FIRST_FUEL_SLOT; fuelSlot < FIRST_FUEL_SLOT + FUEL_SLOTS_COUNT; fuelSlot++) {
+            ItemStack fuelStack = itemStacks[fuelSlot];
+
+            if (fuelStack.getItem() == itemStack.getItem() && (!fuelStack.getHasSubtypes() || fuelStack.getMetadata() == fuelStack.getMetadata())
+                    && ItemStack.areItemStackTagsEqual(fuelStack, itemStack)) {
+                int combinedSize = itemStacks[fuelSlot].getCount() + itemStack.getCount();  //getStackSize()
+                if (combinedSize <= getInventoryStackLimit() && combinedSize <= itemStacks[fuelSlot].getMaxStackSize()) {
+                    return fuelSlot;
+                }
+            }
+        }
+
         Integer firstEmptySlotOrNull = null;
 
         for (int outputSlot = FIRST_OUTPUT_SLOT; outputSlot < FIRST_OUTPUT_SLOT + OUTPUT_SLOTS_COUNT; outputSlot++) {
             ItemStack outputStack = itemStacks[outputSlot];
 
-            if (outputStack.isEmpty()) {
+            if (outputStack.isEmpty() && firstEmptySlotOrNull == null) {
                 firstEmptySlotOrNull = outputSlot;
             }
 
