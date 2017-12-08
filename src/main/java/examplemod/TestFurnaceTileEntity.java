@@ -153,9 +153,8 @@ public class TestFurnaceTileEntity extends TileEntity implements IInventory, ITi
         for (int fuelSlot = FIRST_FUEL_SLOT; fuelSlot < FIRST_FUEL_SLOT + FUEL_SLOTS_COUNT; fuelSlot++) {
             ItemStack fuelStack = itemStacks[fuelSlot];
 
-            if (fuelStack.getItem() == itemStack.getItem() && (!fuelStack.getHasSubtypes() || fuelStack.getMetadata() == fuelStack.getMetadata())
-                    && ItemStack.areItemStackTagsEqual(fuelStack, itemStack)) {
-                int combinedSize = itemStacks[fuelSlot].getCount() + itemStack.getCount();  //getStackSize()
+            if (ItemStack.areItemsEqual(itemStack, fuelStack)) {
+                int combinedSize = itemStacks[fuelSlot].getCount() + itemStack.getCount();
                 if (combinedSize <= getInventoryStackLimit() && combinedSize <= itemStacks[fuelSlot].getMaxStackSize()) {
                     return fuelSlot;
                 }
@@ -171,9 +170,8 @@ public class TestFurnaceTileEntity extends TileEntity implements IInventory, ITi
                 firstEmptySlotOrNull = outputSlot;
             }
 
-            if (outputStack.getItem() == itemStack.getItem() && (!outputStack.getHasSubtypes() || outputStack.getMetadata() == outputStack.getMetadata())
-                    && ItemStack.areItemStackTagsEqual(outputStack, itemStack)) {
-                int combinedSize = itemStacks[outputSlot].getCount() + itemStack.getCount();  //getStackSize()
+            if (ItemStack.areItemsEqual(itemStack, outputStack)) {
+                int combinedSize = itemStacks[outputSlot].getCount() + itemStack.getCount();
                 if (combinedSize <= getInventoryStackLimit() && combinedSize <= itemStacks[outputSlot].getMaxStackSize()) {
                     return outputSlot;
                 }
