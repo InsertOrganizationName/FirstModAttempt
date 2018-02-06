@@ -1,16 +1,29 @@
 [
-{
-  "modid": "examplemod",
-  "name": "First Mod",
-  "description": "First mod attempt.",
-  "version": "0.0.1",
-  "mcversion": "1.12.2",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["kirypto", "TheLuminary"],
-  "credits": "07",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+    {
+        "modid": "examplemod",
+        "name": "First Mod",
+        "description": "First mod attempt.",
+        "version": "0.0.1",
+        "mcversion": "1.12.2",
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["kirypto", "TheLuminary"],
+        "credits": "07",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    },
+    {
+        "modid": "gmod",
+        "name": "GMod",
+        "description": "GMod",
+        "version": "0.0.1",
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["kirypto"],
+        "credits": "",
+        "logoFile": "",
+        "screenshots": [],
+        "dependencies": []
+    }
 ]
