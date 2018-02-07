@@ -11,9 +11,16 @@ public abstract class BaseParticle extends Particle {
 
     public BaseParticle(BaseParticleConstructorInputContainer inputContainer) {
         super(inputContainer.getWorld(),
-              inputContainer.getPositionX(),   inputContainer.getPositionY(),   inputContainer.getPositionZ(),
-              inputContainer.getVelocityX(),   inputContainer.getVelocityY(),   inputContainer.getVelocityZ());
+              inputContainer.getPositionX(), inputContainer.getPositionY(), inputContainer.getPositionZ(),
+              inputContainer.getVelocityX(), inputContainer.getVelocityY(), inputContainer.getVelocityZ());
 
+        if (!inputContainer.shouldApplyVanillaInitialVelocityRandomization()) {
+            this.motionX = inputContainer.getVelocityX();
+            this.motionY = inputContainer.getVelocityY();
+            this.motionZ = inputContainer.getVelocityZ();
+        }
+
+        this.particleGravity = inputContainer.getParticleGravity();
 
     }
 }
