@@ -2,7 +2,7 @@ package gmod.utils;
 
 public class Position extends Vector3 {
 
-    public static Position of(double z, double y, double x) {
+    public static Position of(double x, double y, double z) {
         return new Position(x, y, z);
     }
 
