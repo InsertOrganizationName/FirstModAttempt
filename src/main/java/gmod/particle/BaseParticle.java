@@ -30,5 +30,10 @@ public abstract class BaseParticle extends Particle {
                 .getAtlasSprite(this.getResourceLocation().toString());
         this.setParticleTexture(sprite);
     }
+
+    @Override
+    public int getFXLayer() {
+        return 1;
+    }
 }
 
