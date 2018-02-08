@@ -12,13 +12,17 @@ class BaseParticleConstructorInputContainer {
     private final double velocityZ;
     private final float particleGravity;
     private final boolean applyVanillaInitialVelocityRandomization;
+    private final float particleAlpha;
+    private final int particleMaxAge;
 
     public BaseParticleConstructorInputContainer(
             World world,
             double positionX, double positionY, double positionZ,
             double velocityX, double velocityY, double velocityZ,
             boolean applyVanillaInitialVelocityRandomization,
-            float particleGravity) {
+            float particleGravity,
+            float particleAlpha,
+            int particleMaxAge) {
         this.world = world;
         this.positionX = positionX;
         this.positionY = positionY;
@@ -28,6 +32,8 @@ class BaseParticleConstructorInputContainer {
         this.velocityZ = velocityZ;
         this.applyVanillaInitialVelocityRandomization = applyVanillaInitialVelocityRandomization;
         this.particleGravity = particleGravity;
+        this.particleAlpha = particleAlpha;
+        this.particleMaxAge = particleMaxAge;
     }
 
     public World getWorld() {
@@ -64,5 +70,13 @@ class BaseParticleConstructorInputContainer {
 
     public boolean shouldApplyVanillaInitialVelocityRandomization() {
         return applyVanillaInitialVelocityRandomization;
+    }
+
+    public float getParticleAlpha() {
+        return particleAlpha;
+    }
+
+    public int getParticleMaxAge() {
+        return particleMaxAge;
     }
 }

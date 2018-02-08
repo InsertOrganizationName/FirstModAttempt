@@ -21,7 +21,8 @@ public abstract class BaseParticle extends Particle {
         }
 
         this.particleGravity = inputContainer.getParticleGravity();
-
+        this.particleAlpha = inputContainer.getParticleAlpha();
+        this.particleMaxAge = inputContainer.getParticleMaxAge();
     }
 }
 
