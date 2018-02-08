@@ -1,82 +1,78 @@
 package gmod.particle;
 
+import gmod.utils.Position;
+import gmod.utils.Velocity;
 import net.minecraft.world.World;
 
 class BaseParticleConstructorInputContainer {
-    private final World world;
-    private final double positionX;
-    private final double positionY;
-    private final double positionZ;
-    private final double velocityX;
-    private final double velocityY;
-    private final double velocityZ;
-    private final float particleGravity;
-    private final boolean applyVanillaInitialVelocityRandomization;
-    private final float particleAlpha;
-    private final int particleMaxAge;
+    private World world;
+    private Position position;
+    private Velocity velocity;
+    private float particleGravity;
+    private boolean shouldApplyVanillaInitialVelocityRandomization;
+    private float particleAlpha;
+    private int particleMaxAge;
 
-    public BaseParticleConstructorInputContainer(
-            World world,
-            double positionX, double positionY, double positionZ,
-            double velocityX, double velocityY, double velocityZ,
-            boolean applyVanillaInitialVelocityRandomization,
-            float particleGravity,
-            float particleAlpha,
-            int particleMaxAge) {
-        this.world = world;
-        this.positionX = positionX;
-        this.positionY = positionY;
-        this.positionZ = positionZ;
-        this.velocityX = velocityX;
-        this.velocityY = velocityY;
-        this.velocityZ = velocityZ;
-        this.applyVanillaInitialVelocityRandomization = applyVanillaInitialVelocityRandomization;
-        this.particleGravity = particleGravity;
+    public float getParticleAlpha() {
+        return particleAlpha;
+    }
+
+    public BaseParticleConstructorInputContainer setParticleAlpha(float particleAlpha) {
         this.particleAlpha = particleAlpha;
-        this.particleMaxAge = particleMaxAge;
-    }
-
-    public World getWorld() {
-        return world;
-    }
-
-    public double getPositionX() {
-        return positionX;
-    }
-
-    public double getPositionY() {
-        return positionY;
-    }
-
-    public double getPositionZ() {
-        return positionZ;
-    }
-
-    public double getVelocityX() {
-        return velocityX;
-    }
-
-    public double getVelocityY() {
-        return velocityY;
-    }
-
-    public double getVelocityZ() {
-        return velocityZ;
+        return this;
     }
 
     public float getParticleGravity() {
         return particleGravity;
     }
 
-    public boolean shouldApplyVanillaInitialVelocityRandomization() {
-        return applyVanillaInitialVelocityRandomization;
-    }
-
-    public float getParticleAlpha() {
-        return particleAlpha;
+    public BaseParticleConstructorInputContainer setParticleGravity(float particleGravity) {
+        this.particleGravity = particleGravity;
+        return this;
     }
 
     public int getParticleMaxAge() {
         return particleMaxAge;
+    }
+
+    public BaseParticleConstructorInputContainer setParticleMaxAge(int particleMaxAge) {
+        this.particleMaxAge = particleMaxAge;
+        return this;
+    }
+
+    public boolean getShouldApplyVanillaInitialVelocityRandomization() {
+        return shouldApplyVanillaInitialVelocityRandomization;
+    }
+
+    public BaseParticleConstructorInputContainer setShouldApplyVanillaInitialVelocityRandomization(boolean shouldApplyVanillaInitialVelocityRandomization) {
+        this.shouldApplyVanillaInitialVelocityRandomization = shouldApplyVanillaInitialVelocityRandomization;
+        return this;
+    }
+
+    public World getWorld() {
+        return world;
+    }
+
+    public BaseParticleConstructorInputContainer setWorld(World world) {
+        this.world = world;
+        return this;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public BaseParticleConstructorInputContainer setPosition(Position position) {
+        this.position = position;
+        return this;
+    }
+
+    public Velocity getVelocity() {
+        return velocity;
+    }
+
+    public BaseParticleConstructorInputContainer setVelocity(Velocity velocity) {
+        this.velocity = velocity;
+        return this;
     }
 }
