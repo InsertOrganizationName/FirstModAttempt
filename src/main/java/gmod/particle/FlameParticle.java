@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 public class FlameParticle extends BaseParticle {
 
     public static FlameParticle of(World world, Position position) {
-        BaseParticleConstructorInputContainer inputContainer = getFlameParticleInputContainer()
+        BaseParticleInputContainer inputContainer = getFlameParticleInputContainer()
                 .setWorld(world)
                 .setPosition(position);
 
@@ -17,7 +17,7 @@ public class FlameParticle extends BaseParticle {
     }
 
     public static FlameParticle of(World world, Position position, Velocity velocity) {
-        BaseParticleConstructorInputContainer inputContainer = getFlameParticleInputContainer()
+        BaseParticleInputContainer inputContainer = getFlameParticleInputContainer()
                 .setWorld(world)
                 .setPosition(position)
                 .setVelocity(velocity);
@@ -25,8 +25,8 @@ public class FlameParticle extends BaseParticle {
         return new FlameParticle(inputContainer);
     }
 
-    private static BaseParticleConstructorInputContainer getFlameParticleInputContainer() {
-        return new BaseParticleConstructorInputContainer()
+    private static BaseParticleInputContainer getFlameParticleInputContainer() {
+        return new BaseParticleInputContainer()
                 .setParticleAlpha(.99f)
                 .setParticleGravity(0f)
                 .setShouldApplyVanillaInitialVelocityRandomization(false)
@@ -38,7 +38,7 @@ public class FlameParticle extends BaseParticle {
         super();
     }
 
-    private FlameParticle(BaseParticleConstructorInputContainer inputContainer) {
+    private FlameParticle(BaseParticleInputContainer inputContainer) {
         super(inputContainer);
     }
 

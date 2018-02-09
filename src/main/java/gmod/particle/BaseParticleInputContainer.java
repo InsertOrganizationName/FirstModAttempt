@@ -4,7 +4,7 @@ import insertorgname.anvil.utils.Position;
 import insertorgname.anvil.utils.Velocity;
 import net.minecraft.world.World;
 
-public class BaseParticleConstructorInputContainer {
+public class BaseParticleInputContainer {
     private World world;
     private Position position;
     private Velocity velocity;
@@ -17,7 +17,7 @@ public class BaseParticleConstructorInputContainer {
         return particleAlpha;
     }
 
-    public BaseParticleConstructorInputContainer setParticleAlpha(float particleAlpha) {
+    public BaseParticleInputContainer setParticleAlpha(float particleAlpha) {
         this.particleAlpha = particleAlpha;
         return this;
     }
@@ -26,7 +26,7 @@ public class BaseParticleConstructorInputContainer {
         return particleGravity;
     }
 
-    public BaseParticleConstructorInputContainer setParticleGravity(float particleGravity) {
+    public BaseParticleInputContainer setParticleGravity(float particleGravity) {
         this.particleGravity = particleGravity;
         return this;
     }
@@ -35,7 +35,7 @@ public class BaseParticleConstructorInputContainer {
         return particleMaxAge;
     }
 
-    public BaseParticleConstructorInputContainer setParticleMaxAge(int particleMaxAge) {
+    public BaseParticleInputContainer setParticleMaxAge(int particleMaxAge) {
         this.particleMaxAge = particleMaxAge;
         return this;
     }
@@ -44,7 +44,7 @@ public class BaseParticleConstructorInputContainer {
         return shouldApplyVanillaInitialVelocityRandomization;
     }
 
-    public BaseParticleConstructorInputContainer setShouldApplyVanillaInitialVelocityRandomization(boolean shouldApplyVanillaInitialVelocityRandomization) {
+    public BaseParticleInputContainer setShouldApplyVanillaInitialVelocityRandomization(boolean shouldApplyVanillaInitialVelocityRandomization) {
         this.shouldApplyVanillaInitialVelocityRandomization = shouldApplyVanillaInitialVelocityRandomization;
         return this;
     }
@@ -53,7 +53,7 @@ public class BaseParticleConstructorInputContainer {
         return world;
     }
 
-    public BaseParticleConstructorInputContainer setWorld(World world) {
+    public BaseParticleInputContainer setWorld(World world) {
         this.world = world;
         return this;
     }
@@ -62,7 +62,7 @@ public class BaseParticleConstructorInputContainer {
         return position;
     }
 
-    public BaseParticleConstructorInputContainer setPosition(Position position) {
+    public BaseParticleInputContainer setPosition(Position position) {
         this.position = position;
         return this;
     }
@@ -71,7 +71,7 @@ public class BaseParticleConstructorInputContainer {
         return velocity;
     }
 
-    public BaseParticleConstructorInputContainer setVelocity(Velocity velocity) {
+    public BaseParticleInputContainer setVelocity(Velocity velocity) {
         this.velocity = velocity;
         return this;
     }
