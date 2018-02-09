@@ -1,6 +1,5 @@
 package insertorgname.anvil.particle;
 
-import gmod.particle.BaseParticleInputContainer;
 import gmod.particle.ParticleTextureStitchEventHandler;
 import insertorgname.anvil.utils.ClassReflectionMagic;
 import net.minecraft.client.Minecraft;

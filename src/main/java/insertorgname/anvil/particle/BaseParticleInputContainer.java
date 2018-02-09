@@ -1,4 +1,4 @@
-package gmod.particle;
+package insertorgname.anvil.particle;
 
 import insertorgname.anvil.utils.Position;
 import insertorgname.anvil.utils.Velocity;
