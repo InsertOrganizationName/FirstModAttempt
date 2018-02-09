@@ -35,6 +35,8 @@ public class FlameParticle extends BaseParticle {
                 .setVelocity(Velocity.of(0, 0, 0));
     }
 
+
+    @SuppressWarnings("unused") // Empty constructor needed for Anvil
     public FlameParticle() {
         super();
     }
