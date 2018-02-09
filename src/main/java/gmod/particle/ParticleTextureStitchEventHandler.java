@@ -14,7 +14,7 @@ public class ParticleTextureStitchEventHandler {
     }
 
     @SubscribeEvent
-    public void stitcherEventPreASFD(TextureStitchEvent.Pre event) {
+    public void handleParticleTextureStitchEvent(TextureStitchEvent.Pre event) {
         for (ResourceLocation resourceLocation : this.resourceLocations) {
             event.getMap().registerSprite(resourceLocation);
         }
