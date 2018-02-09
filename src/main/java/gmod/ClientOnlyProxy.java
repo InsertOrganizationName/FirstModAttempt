@@ -1,7 +1,7 @@
 package gmod;
 
 import insertorgname.anvil.particle.BaseParticle;
-import gmod.particle.TextureStitcherBreathFx;
+import gmod.particle.KeyBindingHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;
@@ -38,7 +38,7 @@ public class ClientOnlyProxy extends CommonProxy {
         super.preInit();
 
         MinecraftForge.EVENT_BUS.register(BaseParticle.registerAllChildren());
-        MinecraftForge.EVENT_BUS.register(new TextureStitcherBreathFx());
+        MinecraftForge.EVENT_BUS.register(new KeyBindingHandler());
 
         keyBindings = new ArrayList<>();
         keyBindings.add(new KeyBinding("gmod.test", org.lwjgl.input.Keyboard.KEY_P, "key.gmod.category"));
