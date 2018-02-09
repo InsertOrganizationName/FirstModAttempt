@@ -9,6 +9,7 @@ import net.minecraft.world.World;
 
 public class FlameParticle extends BaseParticle {
 
+    // region Constructors
     public static FlameParticle of(World world, Position position) {
         BaseParticleInputContainer inputContainer = getFlameParticleInputContainer()
                 .setWorld(world)
@@ -26,16 +27,6 @@ public class FlameParticle extends BaseParticle {
         return new FlameParticle(inputContainer);
     }
 
-    private static BaseParticleInputContainer getFlameParticleInputContainer() {
-        return new BaseParticleInputContainer()
-                .setParticleAlpha(.99f)
-                .setParticleGravity(0f)
-                .setShouldApplyVanillaInitialVelocityRandomization(false)
-                .setParticleMaxAge(50)
-                .setVelocity(Velocity.of(0, 0, 0));
-    }
-
-
     @SuppressWarnings("unused") // Empty constructor needed for Anvil
     public FlameParticle() {
         super();
@@ -44,9 +35,19 @@ public class FlameParticle extends BaseParticle {
     private FlameParticle(BaseParticleInputContainer inputContainer) {
         super(inputContainer);
     }
+    // endregion
 
     @Override
     protected ResourceLocation getResourceLocation() {
         return new ResourceLocation("gmod:entity/flame_fx");
+    }
+
+    private static BaseParticleInputContainer getFlameParticleInputContainer() {
+        return new BaseParticleInputContainer()
+                .setParticleAlpha(.99f)
+                .setParticleGravity(0f)
+                .setShouldApplyVanillaInitialVelocityRandomization(false)
+                .setParticleMaxAge(50)
+                .setVelocity(Velocity.of(0, 0, 0));
     }
 }
