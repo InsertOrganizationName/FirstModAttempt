@@ -1,5 +1,6 @@
 package gmod;
 
+import gmod.particle.BaseParticle;
 import gmod.particle.TextureStitcherBreathFx;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -36,6 +37,7 @@ public class ClientOnlyProxy extends CommonProxy {
     public void preInit() {
         super.preInit();
 
+        MinecraftForge.EVENT_BUS.register(BaseParticle.registerAllChildren());
         MinecraftForge.EVENT_BUS.register(new TextureStitcherBreathFx());
 
         keyBindings = new ArrayList<>();

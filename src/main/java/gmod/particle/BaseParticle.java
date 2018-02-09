@@ -1,15 +1,22 @@
 package gmod.particle;
 
+import gmod.utils.ClassReflectionMagic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.util.ResourceLocation;
 
+import java.util.Collection;
+import java.util.stream.Collectors;
+
 public abstract class BaseParticle extends Particle {
 
-    private final ResourceLocation resourceLocation = getResourceLocation();
-
     protected abstract ResourceLocation getResourceLocation();
+
+    BaseParticle() {
+        super(Minecraft.getMinecraft().world, 0, 0, 0);
+        this.particleMaxAge = 0;
+    }
 
     BaseParticle(BaseParticleConstructorInputContainer inputContainer) {
         super(inputContainer.getWorld(),
@@ -29,6 +36,15 @@ public abstract class BaseParticle extends Particle {
         TextureAtlasSprite sprite = Minecraft.getMinecraft().getTextureMapBlocks()
                 .getAtlasSprite(this.getResourceLocation().toString());
         this.setParticleTexture(sprite);
+    }
+
+    public static ParticleTextureStitchEventHandler registerAllChildren() {
+
+        Collection<BaseParticle> subclasses = ClassReflectionMagic.getSubclasses(BaseParticle.class, "gmod.particle");
+
+        Collection<ResourceLocation> resourceLocations = subclasses.stream().map(BaseParticle::getResourceLocation).collect(Collectors.toList());
+
+        return new ParticleTextureStitchEventHandler(resourceLocations);
     }
 
     @Override

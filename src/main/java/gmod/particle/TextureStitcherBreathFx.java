@@ -14,11 +14,6 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class TextureStitcherBreathFx {
-    @SubscribeEvent
-    public void stitcherEventPreASFD(TextureStitchEvent.Pre event) {
-        ResourceLocation flameRL = new ResourceLocation("gmod:entity/flame_fx");
-        event.getMap().registerSprite(flameRL);
-    }
 
     @SideOnly(Side.CLIENT)
     @SubscribeEvent(priority = EventPriority.NORMAL, receiveCanceled = true)

@@ -33,6 +33,10 @@ public class FlameParticle extends BaseParticle {
                 .setVelocity(Velocity.of(0, 0, 0));
     }
 
+    public FlameParticle() {
+        super();
+    }
+
     private FlameParticle(BaseParticleConstructorInputContainer inputContainer) {
         super(inputContainer);
     }
