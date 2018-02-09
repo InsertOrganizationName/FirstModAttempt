@@ -1,5 +1,7 @@
-package gmod.particle;
+package anvil.particle;
 
+import gmod.particle.BaseParticleConstructorInputContainer;
+import gmod.particle.ParticleTextureStitchEventHandler;
 import gmod.utils.ClassReflectionMagic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
@@ -13,12 +15,12 @@ public abstract class BaseParticle extends Particle {
 
     protected abstract ResourceLocation getResourceLocation();
 
-    BaseParticle() {
+    protected BaseParticle() {
         super(Minecraft.getMinecraft().world, 0, 0, 0);
         this.particleMaxAge = 0;
     }
 
-    BaseParticle(BaseParticleConstructorInputContainer inputContainer) {
+    protected BaseParticle(BaseParticleConstructorInputContainer inputContainer) {
         super(inputContainer.getWorld(),
               inputContainer.getPosition().getX(), inputContainer.getPosition().getY(), inputContainer.getPosition().getZ(),
               inputContainer.getVelocity().getX(), inputContainer.getVelocity().getY(), inputContainer.getVelocity().getZ());

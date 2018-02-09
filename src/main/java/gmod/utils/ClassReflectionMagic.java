@@ -1,6 +1,6 @@
 package gmod.utils;
 
-import gmod.particle.BaseParticle;
+import anvil.particle.BaseParticle;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,6 +23,7 @@ public class ClassReflectionMagic {
 
             for (Class<?> particle : classesForPackage) {
                 try {
+                    //noinspection unchecked
                     subclasses.add((T)particle.newInstance());
                 } catch (InstantiationException e) {
                     e.printStackTrace();
@@ -35,9 +36,9 @@ public class ClassReflectionMagic {
     }
 
     private static ArrayList<Class<?>> getClassesForPackage(Class inheritCheckClass, String pkgname) {
-        ArrayList<Class<?>> classes = new ArrayList<Class<?>>();
+        ArrayList<Class<?>> classes = new ArrayList<>();
         // Get a File object for the package
-        File directory = null;
+        File directory;
         String fullPath;
         String relPath = pkgname.replace('.', '/');
         System.out.println("ClassDiscovery: Package: " + pkgname + " becomes Path:" + relPath);
@@ -61,11 +62,12 @@ public class ClassReflectionMagic {
         if (directory != null && directory.exists()) {
             // Get the list of the files contained in the package
             String[] files = directory.list();
-            for (int i = 0; i < files.length; i++) {
+            assert files != null;
+            for (String file : files) {
                 // we are only interested in .class files
-                if (files[i].endsWith(".class")) {
+                if (file.endsWith(".class")) {
                     // removes the .class extension
-                    String className = pkgname + '.' + files[i].substring(0, files[i].length() - 6);
+                    String className = pkgname + '.' + file.substring(0, file.length() - 6);
                     getClass(className, inheritCheckClass).ifPresent(classes::add);
                 }
             }

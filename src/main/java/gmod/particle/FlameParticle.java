@@ -1,5 +1,6 @@
 package gmod.particle;
 
+import anvil.particle.BaseParticle;
 import gmod.utils.Position;
 import gmod.utils.Velocity;
 import net.minecraft.util.ResourceLocation;

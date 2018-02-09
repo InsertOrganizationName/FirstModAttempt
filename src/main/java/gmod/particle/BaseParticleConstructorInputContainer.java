@@ -4,7 +4,7 @@ import gmod.utils.Position;
 import gmod.utils.Velocity;
 import net.minecraft.world.World;
 
-class BaseParticleConstructorInputContainer {
+public class BaseParticleConstructorInputContainer {
     private World world;
     private Position position;
     private Velocity velocity;

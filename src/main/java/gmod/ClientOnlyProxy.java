@@ -1,6 +1,6 @@
 package gmod;
 
-import gmod.particle.BaseParticle;
+import anvil.particle.BaseParticle;
 import gmod.particle.TextureStitcherBreathFx;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
