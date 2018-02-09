@@ -1,4 +1,4 @@
-package gmod.utils;
+package anvil.utils;
 
 import anvil.particle.BaseParticle;
 

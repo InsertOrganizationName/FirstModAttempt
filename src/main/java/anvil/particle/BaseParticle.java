@@ -2,7 +2,7 @@ package anvil.particle;
 
 import gmod.particle.BaseParticleConstructorInputContainer;
 import gmod.particle.ParticleTextureStitchEventHandler;
-import gmod.utils.ClassReflectionMagic;
+import anvil.utils.ClassReflectionMagic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;

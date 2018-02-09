@@ -1,12 +1,10 @@
 package gmod.particle;
 
 import gmod.ClientOnlyProxy;
-import gmod.utils.Position;
-import gmod.utils.Velocity;
+import anvil.utils.Position;
+import anvil.utils.Velocity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;

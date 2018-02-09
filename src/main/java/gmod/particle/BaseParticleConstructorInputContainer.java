@@ -1,7 +1,7 @@
 package gmod.particle;
 
-import gmod.utils.Position;
-import gmod.utils.Velocity;
+import anvil.utils.Position;
+import anvil.utils.Velocity;
 import net.minecraft.world.World;
 
 public class BaseParticleConstructorInputContainer {

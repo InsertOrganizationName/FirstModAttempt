@@ -1,4 +1,4 @@
-package gmod.utils;
+package anvil.utils;
 
 import net.minecraft.util.math.Vec3d;
 

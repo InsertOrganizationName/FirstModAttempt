@@ -1,4 +1,4 @@
-package gmod.utils;
+package anvil.utils;
 
 public class Vector3 {
     private final double x;
@@ -9,7 +9,7 @@ public class Vector3 {
         return new Vector3(x, y, z);
     }
 
-    protected Vector3(double x, double y, double z) {
+    Vector3(double x, double y, double z) {
         this.x = x;
         this.y = y;
         this.z = z;
