@@ -1,4 +1,4 @@
-package anvil.utils;
+package insertorgname.anvil.utils;
 
 public class Vector3 {
     private final double x;

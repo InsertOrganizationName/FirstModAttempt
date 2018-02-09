@@ -1,8 +1,8 @@
 package gmod.particle;
 
-import anvil.particle.BaseParticle;
-import anvil.utils.Position;
-import anvil.utils.Velocity;
+import insertorgname.anvil.particle.BaseParticle;
+import insertorgname.anvil.utils.Position;
+import insertorgname.anvil.utils.Velocity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 

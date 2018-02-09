@@ -1,8 +1,8 @@
 package gmod.particle;
 
 import gmod.ClientOnlyProxy;
-import anvil.utils.Position;
-import anvil.utils.Velocity;
+import insertorgname.anvil.utils.Position;
+import insertorgname.anvil.utils.Velocity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraftforge.fml.common.eventhandler.EventPriority;
