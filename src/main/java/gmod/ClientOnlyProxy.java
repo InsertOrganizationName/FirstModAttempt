@@ -1,7 +1,6 @@
 package gmod;
 
 import insertorgname.anvil.particle.BaseParticle;
-import gmod.particle.KeyBindingHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.settings.KeyBinding;

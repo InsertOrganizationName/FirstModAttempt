@@ -1,6 +1,7 @@
-package gmod.particle;
+package gmod;
 
 import gmod.ClientOnlyProxy;
+import gmod.particle.FlameParticle;
 import insertorgname.anvil.utils.Position;
 import insertorgname.anvil.utils.Velocity;
 import net.minecraft.client.Minecraft;
