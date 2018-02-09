@@ -2,7 +2,6 @@ package gmod.particle;
 
 import gmod.utils.Position;
 import gmod.utils.Velocity;
-import net.minecraft.init.Blocks;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
@@ -28,9 +27,9 @@ public class FlameParticle extends BaseParticle {
     private static BaseParticleConstructorInputContainer getFlameParticleInputContainer() {
         return new BaseParticleConstructorInputContainer()
                 .setParticleAlpha(.99f)
-                .setParticleGravity(Blocks.FIRE.blockParticleGravity)
+                .setParticleGravity(0f)
                 .setShouldApplyVanillaInitialVelocityRandomization(false)
-                .setParticleMaxAge(100)
+                .setParticleMaxAge(50)
                 .setVelocity(Velocity.of(0, 0, 0));
     }
 
