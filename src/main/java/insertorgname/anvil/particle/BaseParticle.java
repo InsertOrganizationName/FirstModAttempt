@@ -1,11 +1,12 @@
 package insertorgname.anvil.particle;
 
-import gmod.particle.ParticleTextureStitchEventHandler;
 import insertorgname.anvil.utils.ClassReflectionMagic;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.TextureStitchEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -51,6 +52,21 @@ public abstract class BaseParticle extends Particle {
     @Override
     public int getFXLayer() {
         return 1;
+    }
+
+    private static class ParticleTextureStitchEventHandler {
+        private Collection<ResourceLocation> resourceLocations;
+
+        private ParticleTextureStitchEventHandler(Collection<ResourceLocation> resourceLocations) {
+            this.resourceLocations = resourceLocations;
+        }
+
+        @SubscribeEvent
+        public void handleParticleTextureStitchEvent(TextureStitchEvent.Pre event) {
+            for (ResourceLocation resourceLocation : this.resourceLocations) {
+                event.getMap().registerSprite(resourceLocation);
+            }
+        }
     }
 }
 
